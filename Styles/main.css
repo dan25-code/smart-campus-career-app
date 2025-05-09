@@ -1,79 +1,61 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f3fa;
-  color: #2c2c2c;
-  line-height: 1.6;
-  padding: 0;
+  background-color: white;
+  color: #b30000;
   margin: 0;
+  padding: 0;
 }
 
-.navbar {
-  background-color: #4b0082;
+header {
+  background-color: #b30000;
   color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 1rem;
+  text-align: center;
 }
 
-.navbar .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.navbar .nav-links {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
 }
 
-.navbar .nav-links > li {
-  position: relative;
-}
-
-.navbar .nav-links a {
+nav a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
+  font-weight: bold;
 }
 
-.navbar .nav-links a:hover {
-  color: #ddd;
+section {
+  padding: 2rem;
 }
 
-/* Dropdown menu styles */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 2.5rem;
-  left: 0;
-  background-color: #4b0082;
-  padding: 0.5rem 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  min-width: 200px;
-  z-index: 999;
-}
-
-.dropdown-menu li {
-  padding: 0.5rem 1rem;
-}
-
-.dropdown-menu li a {
-  display: block;
+.carousel {
+  position: relative;
   width: 100%;
-  color: white;
+  max-height: 500px;
+  overflow: hidden;
 }
 
-.dropdown:hover .dropdown-menu {
+.carousel img {
+  width: 100%;
+  height: auto;
   display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
