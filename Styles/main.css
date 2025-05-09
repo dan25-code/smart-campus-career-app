@@ -15,65 +15,65 @@ body {
   margin: 0;
 }
 
-/* Navbar */
 .navbar {
   background-color: #4b0082;
   color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
 }
 
 .navbar .logo {
-  font-size: 1.5rem;
   font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links > li {
+  position: relative;
 }
 
 .navbar .nav-links a {
-  margin-left: 1.5rem;
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-  color: #d1b3ff;
+  color: #ddd;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(to right, #5e60ce, #7400b8);
+/* Dropdown menu styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background-color: #4b0082;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 200px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  display: block;
+  width: 100%;
   color: white;
-  text-align: center;
-  padding: 4rem 2rem;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
-
-/* Section */
-.section {
-  padding: 2rem;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 1.8rem;
-  color: #3c096c;
-  margin-bottom: 1rem;
-}
-
-.section p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #4a4a4a;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
